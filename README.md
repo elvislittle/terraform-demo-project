@@ -1,6 +1,6 @@
 # Terraform GitHub Repository Demo Project
 
-This project demonstrates how to use Terraform modules to create actual GitHub repositories and generate an info page.
+This project demonstrates how to use Terraform modules to create actual GitHub repositories and generate a Markdown information page.
 
 ## Prerequisites
 
@@ -20,7 +20,7 @@ terraform-demo-project/
     │   ├── main.tf
     │   ├── variables.tf
     │   └── outputs.tf
-    └── infopage/      # Generates HTML info page
+    └── infopage/      # Creates GitHub repository with Markdown info page
         ├── main.tf
         ├── variables.tf
         └── outputs.tf
@@ -29,7 +29,7 @@ terraform-demo-project/
 ## How it works
 
 1. **repositories module**: Creates real GitHub repositories with README and main files
-2. **infopage module**: Takes repository data and generates an HTML page with links
+2. **infopage module**: Takes repository data and creates a GitHub repository with a Markdown information page
 3. **Module interaction**: Outputs from repositories module are passed as inputs to infopage module
 
 ## Setup
@@ -60,14 +60,14 @@ terraform-demo-project/
    - `backend-repo`
    - `frontend-repo` 
    - `infra-repo`
-
-4. Check the generated HTML file: `generated/info-page.html`
+   - `docs-repo`
+   - `information-page`
 
 ## What gets created
 
-- **3 GitHub repositories** with appropriate files for each language
+- **4 GitHub repositories** with appropriate files for each language (backend, frontend, infra, docs)
 - **GitHub Pages** enabled for frontend and backend repos
-- **HTML info page** with links to all repositories
+- **Information page repository** with Markdown table showing all repository details
 - **README files** in each repository explaining the project
 
 ## Key Learning Points
