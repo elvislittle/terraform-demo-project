@@ -37,7 +37,7 @@ locals {
     docs = {
       type     = "docs"
       language = "markdown"
-      has_page = true
+      has_page = false
     }
   }
 }
