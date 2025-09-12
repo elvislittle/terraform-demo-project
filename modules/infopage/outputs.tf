@@ -8,6 +8,6 @@ output "repository_url" {
 
 # Output the GitHub Pages URL
 output "pages_url" {
-  description = "URL of the GitHub Pages site"
+  description = "URL of the GitHub Pages for info page"
   value       = try(github_repository.info_page.pages[0].html_url, "Pending")
 }
